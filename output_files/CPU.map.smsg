@@ -1,0 +1,7 @@
+Warning (10268): Verilog HDL information at core.v(38): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at IO.v(26): object "LCD_DATA" differs only in case from object "lcd_data" in the same scope
+Warning (10268): Verilog HDL information at lcd_controller.v(20): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at lcd_test.v(7): object "line1" differs only in case from object "LINE1" in the same scope
+Info (10281): Verilog HDL Declaration information at lcd_test.v(9): object "line2" differs only in case from object "LINE2" in the same scope
+Warning (10268): Verilog HDL information at signed_div_datapath.v(25): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at unsigned_div_datapath.v(20): always construct contains both blocking and non-blocking assignments

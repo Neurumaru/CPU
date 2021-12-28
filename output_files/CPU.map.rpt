@@ -1,0 +1,1136 @@
+Analysis & Synthesis report for CPU
+Mon Dec 20 10:20:27 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |CPU|core:u3|state
+ 11. State Machine - |CPU|IO:u2|state
+ 12. State Machine - |CPU|IO:u2|lcd_controller:lcd2|state
+ 13. State Machine - |CPU|IO:u2|lcd_test:lcd1|state
+ 14. User-Specified and Inferred Latches
+ 15. Registers Removed During Synthesis
+ 16. General Register Statistics
+ 17. Inverted Register Statistics
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Source assignments for ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1
+ 20. Parameter Settings for User Entity Instance: ram:u1|altsyncram:altsyncram_component
+ 21. Parameter Settings for User Entity Instance: core:u3|mul:m
+ 22. Parameter Settings for User Entity Instance: core:u3|mul:m|mul_datapath:u1
+ 23. Parameter Settings for User Entity Instance: core:u3|mul:m|mul_controller:u2
+ 24. Parameter Settings for User Entity Instance: core:u3|unsigned_div:usd
+ 25. Parameter Settings for User Entity Instance: core:u3|unsigned_div:usd|unsigned_div_datapath:u1
+ 26. Parameter Settings for User Entity Instance: core:u3|unsigned_div:usd|unsigned_div_controller:u2
+ 27. Parameter Settings for User Entity Instance: core:u3|signed_div:sd
+ 28. Parameter Settings for User Entity Instance: core:u3|signed_div:sd|signed_div_datapath:u1
+ 29. Parameter Settings for User Entity Instance: core:u3|signed_div:sd|signed_div_controller:u2
+ 30. altsyncram Parameter Settings by Entity Instance
+ 31. Port Connectivity Checks: "IO:u2|lcd_test:lcd1"
+ 32. Port Connectivity Checks: "IO:u2|lcd_decoder:l1|ascii_decoder_hex:adh11"
+ 33. In-System Memory Content Editor Settings
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
+ 36. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Dec 20 10:20:27 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; CPU                                             ;
+; Top-level Entity Name              ; CPU                                             ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 5,617                                           ;
+;     Total combinational functions  ; 5,493                                           ;
+;     Dedicated logic registers      ; 851                                             ;
+; Total registers                    ; 851                                             ;
+; Total pins                         ; 119                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 1,048,576                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; CPU                ; CPU                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
+; CPU.v                            ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/CPU.v                                                    ;         ;
+; core.v                           ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/core.v                                                   ;         ;
+; ram.v                            ; yes             ; User Wizard-Generated File             ; D:/Verilog/CPU/ram.v                                                    ;         ;
+; IO.v                             ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/IO.v                                                     ;         ;
+; lcd_controller.v                 ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/lcd_controller.v                                         ;         ;
+; lcd_test.v                       ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/lcd_test.v                                               ;         ;
+; lcd_decoder.v                    ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/lcd_decoder.v                                            ;         ;
+; ascii_decoder_hex.v              ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/ascii_decoder_hex.v                                      ;         ;
+; button_pulse.v                   ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/button_pulse.v                                           ;         ;
+; led7seg.v                        ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/led7seg.v                                                ;         ;
+; mul.v                            ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/mul.v                                                    ;         ;
+; mul_datapath.v                   ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/mul_datapath.v                                           ;         ;
+; mul_controller.v                 ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/mul_controller.v                                         ;         ;
+; signed_div.v                     ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/signed_div.v                                             ;         ;
+; signed_div_datapath.v            ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/signed_div_datapath.v                                    ;         ;
+; signed_div_controller.v          ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/signed_div_controller.v                                  ;         ;
+; unsigned_div.v                   ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/unsigned_div.v                                           ;         ;
+; unsigned_div_datapath.v          ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/unsigned_div_datapath.v                                  ;         ;
+; unsigned_div_controller.v        ; yes             ; User Verilog HDL File                  ; D:/Verilog/CPU/unsigned_div_controller.v                                ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_9ik1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Verilog/CPU/db/altsyncram_9ik1.tdf                                   ;         ;
+; db/altsyncram_h1b2.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Verilog/CPU/db/altsyncram_h1b2.tdf                                   ;         ;
+; default.mif                      ; yes             ; Auto-Found Memory Initialization File  ; D:/Verilog/CPU/default.mif                                              ;         ;
+; db/decode_rsa.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/Verilog/CPU/db/decode_rsa.tdf                                        ;         ;
+; db/decode_k8a.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/Verilog/CPU/db/decode_k8a.tdf                                        ;         ;
+; db/mux_qob.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/Verilog/CPU/db/mux_qob.tdf                                           ;         ;
+; sld_mod_ram_rom.vhd              ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd   ;         ;
+; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_rom_sr.vhd        ;         ;
+; sld_hub.vhd                      ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_hub.vhd           ;         ;
+; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_jtag_hub.vhd      ;         ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 5,617          ;
+;                                             ;                ;
+; Total combinational functions               ; 5493           ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 3842           ;
+;     -- 3 input functions                    ; 1170           ;
+;     -- <=2 input functions                  ; 481            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 5096           ;
+;     -- arithmetic mode                      ; 397            ;
+;                                             ;                ;
+; Total registers                             ; 851            ;
+;     -- Dedicated logic registers            ; 851            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 119            ;
+; Total memory bits                           ; 1048576        ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 844            ;
+; Total fan-out                               ; 28218          ;
+; Average fan-out                             ; 4.20           ;
++---------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                      ;
++---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                     ; Library Name ;
++---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |CPU                                                                ; 5493 (105)        ; 851 (0)      ; 1048576     ; 0            ; 0       ; 0         ; 119  ; 0            ; |CPU                                                                                                                                                    ; work         ;
+;    |IO:u2|                                                          ; 1579 (181)        ; 153 (114)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2                                                                                                                                              ; work         ;
+;       |lcd_controller:lcd2|                                         ; 12 (12)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_controller:lcd2                                                                                                                          ; work         ;
+;       |lcd_decoder:l1|                                              ; 511 (487)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l1                                                                                                                               ; work         ;
+;          |ascii_decoder_hex:adh10|                                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l1|ascii_decoder_hex:adh10                                                                                                       ; work         ;
+;          |ascii_decoder_hex:adh20|                                  ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l1|ascii_decoder_hex:adh20                                                                                                       ; work         ;
+;          |ascii_decoder_hex:adh21|                                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l1|ascii_decoder_hex:adh21                                                                                                       ; work         ;
+;          |ascii_decoder_hex:adh22|                                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l1|ascii_decoder_hex:adh22                                                                                                       ; work         ;
+;          |ascii_decoder_hex:adh23|                                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l1|ascii_decoder_hex:adh23                                                                                                       ; work         ;
+;       |lcd_decoder:l2|                                              ; 513 (488)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l2                                                                                                                               ; work         ;
+;          |ascii_decoder_hex:adh10|                                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l2|ascii_decoder_hex:adh10                                                                                                       ; work         ;
+;          |ascii_decoder_hex:adh20|                                  ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l2|ascii_decoder_hex:adh20                                                                                                       ; work         ;
+;          |ascii_decoder_hex:adh21|                                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l2|ascii_decoder_hex:adh21                                                                                                       ; work         ;
+;          |ascii_decoder_hex:adh22|                                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l2|ascii_decoder_hex:adh22                                                                                                       ; work         ;
+;          |ascii_decoder_hex:adh23|                                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_decoder:l2|ascii_decoder_hex:adh23                                                                                                       ; work         ;
+;       |lcd_test:lcd1|                                               ; 306 (306)         ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|lcd_test:lcd1                                                                                                                                ; work         ;
+;       |led7seg:led0|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|led7seg:led0                                                                                                                                 ; work         ;
+;       |led7seg:led1|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|led7seg:led1                                                                                                                                 ; work         ;
+;       |led7seg:led2|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|led7seg:led2                                                                                                                                 ; work         ;
+;       |led7seg:led3|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|led7seg:led3                                                                                                                                 ; work         ;
+;       |led7seg:led4|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|led7seg:led4                                                                                                                                 ; work         ;
+;       |led7seg:led5|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|led7seg:led5                                                                                                                                 ; work         ;
+;       |led7seg:led6|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|led7seg:led6                                                                                                                                 ; work         ;
+;       |led7seg:led7|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|IO:u2|led7seg:led7                                                                                                                                 ; work         ;
+;    |button_pulse:k0|                                                ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|button_pulse:k0                                                                                                                                    ; work         ;
+;    |button_pulse:k1|                                                ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|button_pulse:k1                                                                                                                                    ; work         ;
+;    |button_pulse:k2|                                                ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|button_pulse:k2                                                                                                                                    ; work         ;
+;    |core:u3|                                                        ; 3432 (3066)       ; 554 (394)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3                                                                                                                                            ; work         ;
+;       |led7seg:led0|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|led7seg:led0                                                                                                                               ; work         ;
+;       |led7seg:led1|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|led7seg:led1                                                                                                                               ; work         ;
+;       |led7seg:led2|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|led7seg:led2                                                                                                                               ; work         ;
+;       |led7seg:led3|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|led7seg:led3                                                                                                                               ; work         ;
+;       |led7seg:led4|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|led7seg:led4                                                                                                                               ; work         ;
+;       |led7seg:led5|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|led7seg:led5                                                                                                                               ; work         ;
+;       |led7seg:led6|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|led7seg:led6                                                                                                                               ; work         ;
+;       |led7seg:led7|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|led7seg:led7                                                                                                                               ; work         ;
+;       |mul:m|                                                       ; 133 (0)           ; 53 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|mul:m                                                                                                                                      ; work         ;
+;          |mul_controller:u2|                                        ; 10 (10)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|mul:m|mul_controller:u2                                                                                                                    ; work         ;
+;          |mul_datapath:u1|                                          ; 123 (123)         ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|mul:m|mul_datapath:u1                                                                                                                      ; work         ;
+;       |signed_div:sd|                                               ; 98 (0)            ; 54 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|signed_div:sd                                                                                                                              ; work         ;
+;          |signed_div_controller:u2|                                 ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|signed_div:sd|signed_div_controller:u2                                                                                                     ; work         ;
+;          |signed_div_datapath:u1|                                   ; 89 (89)           ; 49 (49)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|signed_div:sd|signed_div_datapath:u1                                                                                                       ; work         ;
+;       |unsigned_div:usd|                                            ; 79 (0)            ; 53 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|unsigned_div:usd                                                                                                                           ; work         ;
+;          |unsigned_div_controller:u2|                               ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|unsigned_div:usd|unsigned_div_controller:u2                                                                                                ; work         ;
+;          |unsigned_div_datapath:u1|                                 ; 70 (70)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|core:u3|unsigned_div:usd|unsigned_div_datapath:u1                                                                                                  ; work         ;
+;    |ram:u1|                                                         ; 259 (0)           ; 58 (0)       ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1                                                                                                                                             ; work         ;
+;       |altsyncram:altsyncram_component|                             ; 259 (0)           ; 58 (0)       ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component                                                                                                             ; work         ;
+;          |altsyncram_9ik1:auto_generated|                           ; 259 (0)           ; 58 (0)       ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated                                                                              ; work         ;
+;             |altsyncram_h1b2:altsyncram1|                           ; 178 (0)           ; 6 (6)        ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1                                                  ; work         ;
+;                |decode_k8a:rden_decode_a|                           ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1|decode_k8a:rden_decode_a                         ; work         ;
+;                |decode_k8a:rden_decode_b|                           ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1|decode_k8a:rden_decode_b                         ; work         ;
+;                |decode_rsa:decode4|                                 ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1|decode_rsa:decode4                               ; work         ;
+;                |decode_rsa:decode5|                                 ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1|decode_rsa:decode5                               ; work         ;
+;                |mux_qob:mux6|                                       ; 80 (80)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1|mux_qob:mux6                                     ; work         ;
+;                |mux_qob:mux7|                                       ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1|mux_qob:mux7                                     ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                             ; 81 (59)           ; 52 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                    ; work         ;
+;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr| ; 22 (22)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr ; work         ;
+;    |sld_hub:auto_hub|                                               ; 115 (1)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub                                                                                                                                   ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                ; 114 (77)          ; 80 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                      ; work         ;
+;          |sld_rom_sr:hub_info_reg|                                  ; 20 (20)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                              ; work         ;
+;          |sld_shadow_jsm:shadow_jsm|                                ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                            ; work         ;
++---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                            ;
++--------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+---------+----------------+
+; Name                                                                                                         ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF            ;
++--------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+---------+----------------+
+; ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 65536        ; 16           ; 65536        ; 16           ; 1048576 ; ../default.mif ;
++--------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+---------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                  ;
++--------+--------------+---------+--------------+--------------+-----------------+----------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance ; IP Include File      ;
++--------+--------------+---------+--------------+--------------+-----------------+----------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |CPU|ram:u1     ; D:/Verilog/CPU/ram.v ;
++--------+--------------+---------+--------------+--------------+-----------------+----------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |CPU|core:u3|state                                                                                                                        ;
++----------------+----------------+----------------+--------------+--------------+--------------+--------------+--------------+------------+----------------+
+; Name           ; state.EXECUTE2 ; state.EXECUTE1 ; state.DECODE ; state.FETCH4 ; state.FETCH3 ; state.FETCH2 ; state.FETCH1 ; state.IDLE ; state.EXECUTE3 ;
++----------------+----------------+----------------+--------------+--------------+--------------+--------------+--------------+------------+----------------+
+; state.IDLE     ; 0              ; 0              ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0              ;
+; state.FETCH1   ; 0              ; 0              ; 0            ; 0            ; 0            ; 0            ; 1            ; 1          ; 0              ;
+; state.FETCH2   ; 0              ; 0              ; 0            ; 0            ; 0            ; 1            ; 0            ; 1          ; 0              ;
+; state.FETCH3   ; 0              ; 0              ; 0            ; 0            ; 1            ; 0            ; 0            ; 1          ; 0              ;
+; state.FETCH4   ; 0              ; 0              ; 0            ; 1            ; 0            ; 0            ; 0            ; 1          ; 0              ;
+; state.DECODE   ; 0              ; 0              ; 1            ; 0            ; 0            ; 0            ; 0            ; 1          ; 0              ;
+; state.EXECUTE1 ; 0              ; 1              ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ; 0              ;
+; state.EXECUTE2 ; 1              ; 0              ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ; 0              ;
+; state.EXECUTE3 ; 0              ; 0              ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ; 1              ;
++----------------+----------------+----------------+--------------+--------------+--------------+--------------+--------------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------+
+; State Machine - |CPU|IO:u2|state                                                                                ;
++------------+----------+----------+----------+----------+----------+----------+------------+----------+----------+
+; Name       ; state.W0 ; state.R5 ; state.R4 ; state.R3 ; state.R2 ; state.R1 ; state.IDLE ; state.R0 ; state.W1 ;
++------------+----------+----------+----------+----------+----------+----------+------------+----------+----------+
+; state.R0   ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0          ; 0        ; 0        ;
+; state.IDLE ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1          ; 1        ; 0        ;
+; state.R1   ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0          ; 1        ; 0        ;
+; state.R2   ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0          ; 1        ; 0        ;
+; state.R3   ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0          ; 1        ; 0        ;
+; state.R4   ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0          ; 1        ; 0        ;
+; state.R5   ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0          ; 1        ; 0        ;
+; state.W0   ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0          ; 1        ; 0        ;
+; state.W1   ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0          ; 1        ; 1        ;
++------------+----------+----------+----------+----------+----------+----------+------------+----------+----------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------+
+; State Machine - |CPU|IO:u2|lcd_controller:lcd2|state            ;
++----------+----------+----------+----------+----------+----------+
+; Name     ; state.S4 ; state.S2 ; state.S1 ; state.S0 ; state.S3 ;
++----------+----------+----------+----------+----------+----------+
+; state.S0 ; 0        ; 0        ; 0        ; 0        ; 0        ;
+; state.S1 ; 0        ; 0        ; 1        ; 1        ; 0        ;
+; state.S2 ; 0        ; 1        ; 0        ; 1        ; 0        ;
+; state.S4 ; 1        ; 0        ; 0        ; 1        ; 0        ;
+; state.S3 ; 0        ; 0        ; 0        ; 1        ; 1        ;
++----------+----------+----------+----------+----------+----------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------+
+; State Machine - |CPU|IO:u2|lcd_test:lcd1|state       ;
++----------+----------+----------+----------+----------+
+; Name     ; state.S3 ; state.S2 ; state.S1 ; state.S0 ;
++----------+----------+----------+----------+----------+
+; state.S0 ; 0        ; 0        ; 0        ; 0        ;
+; state.S1 ; 0        ; 0        ; 1        ; 1        ;
+; state.S2 ; 0        ; 1        ; 0        ; 1        ;
+; state.S3 ; 1        ; 0        ; 0        ; 1        ;
++----------+----------+----------+----------+----------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; IO:u2|instruction[28]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[29]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[30]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[31]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[24]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[25]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[26]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[27]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[20]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[21]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[22]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[23]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[16]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[17]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[18]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[19]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[12]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[13]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[14]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[15]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[8]                                ; SW[16]              ; yes                    ;
+; IO:u2|instruction[9]                                ; SW[16]              ; yes                    ;
+; IO:u2|instruction[10]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[11]                               ; SW[16]              ; yes                    ;
+; IO:u2|instruction[4]                                ; SW[16]              ; yes                    ;
+; IO:u2|instruction[5]                                ; SW[16]              ; yes                    ;
+; IO:u2|instruction[6]                                ; SW[16]              ; yes                    ;
+; IO:u2|instruction[7]                                ; SW[16]              ; yes                    ;
+; IO:u2|instruction[0]                                ; SW[16]              ; yes                    ;
+; IO:u2|instruction[1]                                ; SW[16]              ; yes                    ;
+; IO:u2|instruction[2]                                ; SW[16]              ; yes                    ;
+; IO:u2|instruction[3]                                ; SW[16]              ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; core:u3|state~13                       ; Lost fanout        ;
+; core:u3|state~14                       ; Lost fanout        ;
+; core:u3|state~15                       ; Lost fanout        ;
+; IO:u2|state~13                         ; Lost fanout        ;
+; IO:u2|state~14                         ; Lost fanout        ;
+; IO:u2|state~15                         ; Lost fanout        ;
+; IO:u2|lcd_controller:lcd2|state~9      ; Lost fanout        ;
+; IO:u2|lcd_controller:lcd2|state~10     ; Lost fanout        ;
+; IO:u2|lcd_test:lcd1|state~8            ; Lost fanout        ;
+; IO:u2|lcd_test:lcd1|state~9            ; Lost fanout        ;
+; Total Number of Removed Registers = 10 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 851   ;
+; Number of registers using Synchronous Clear  ; 18    ;
+; Number of registers using Synchronous Load   ; 369   ;
+; Number of registers using Asynchronous Clear ; 702   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 731   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                           ;
++------------------------------------------------------------------------------+---------+
+; Inverted Register                                                            ; Fan out ;
++------------------------------------------------------------------------------+---------+
+; core:u3|SP[15]                                                               ; 5       ;
+; core:u3|BP[15]                                                               ; 4       ;
+; core:u3|BP[14]                                                               ; 4       ;
+; core:u3|BP[13]                                                               ; 4       ;
+; core:u3|BP[12]                                                               ; 4       ;
+; core:u3|BP[11]                                                               ; 4       ;
+; core:u3|BP[10]                                                               ; 4       ;
+; core:u3|BP[9]                                                                ; 4       ;
+; core:u3|BP[8]                                                                ; 4       ;
+; core:u3|BP[7]                                                                ; 4       ;
+; core:u3|BP[6]                                                                ; 4       ;
+; core:u3|BP[5]                                                                ; 4       ;
+; core:u3|BP[4]                                                                ; 4       ;
+; core:u3|BP[3]                                                                ; 4       ;
+; core:u3|BP[2]                                                                ; 4       ;
+; core:u3|BP[1]                                                                ; 4       ;
+; core:u3|BP[0]                                                                ; 4       ;
+; core:u3|SP[14]                                                               ; 5       ;
+; core:u3|SP[13]                                                               ; 5       ;
+; core:u3|SP[12]                                                               ; 5       ;
+; core:u3|SP[11]                                                               ; 5       ;
+; core:u3|SP[10]                                                               ; 5       ;
+; core:u3|SP[9]                                                                ; 5       ;
+; core:u3|SP[8]                                                                ; 5       ;
+; core:u3|SP[7]                                                                ; 5       ;
+; core:u3|SP[6]                                                                ; 5       ;
+; core:u3|SP[5]                                                                ; 5       ;
+; core:u3|SP[4]                                                                ; 5       ;
+; core:u3|SP[3]                                                                ; 5       ;
+; core:u3|SP[2]                                                                ; 5       ;
+; core:u3|SP[1]                                                                ; 5       ;
+; core:u3|SP[0]                                                                ; 8       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2] ; 2       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1] ; 3       ;
+; Total number of inverted registers = 35                                      ;         ;
++------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[3]                                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|IO:u2|data[2]                                                                                                                                                      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CPU|IO:u2|lcd_test:lcd1|dindex[3]                                                                                                                                      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[8]                                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU|core:u3|mul:m|mul_controller:u2|count[0]                                                                                                                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU|core:u3|unsigned_div:usd|unsigned_div_controller:u2|count[1]                                                                                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU|core:u3|signed_div:sd|signed_div_controller:u2|count[1]                                                                                                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPU|IO:u2|lcd_controller:lcd2|count[1]                                                                                                                                 ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |CPU|core:u3|mul:m|mul_datapath:u1|product[0]                                                                                                                           ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |CPU|core:u3|unsigned_div:usd|unsigned_div_datapath:u1|dividend[30]                                                                                                     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |CPU|core:u3|unsigned_div:usd|unsigned_div_datapath:u1|dividend[12]                                                                                                     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |CPU|core:u3|signed_div:sd|signed_div_datapath:u1|dividend[6]                                                                                                           ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |CPU|core:u3|signed_div:sd|signed_div_datapath:u1|dividend[27]                                                                                                          ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |CPU|IO:u2|lcd_test:lcd1|count[12]                                                                                                                                      ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 11 LEs               ; 22 LEs                 ; Yes        ; |CPU|IO:u2|lcd_test:lcd1|count[3]                                                                                                                                       ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |CPU|IO:u2|address[13]                                                                                                                                                  ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 45 LEs               ; 15 LEs                 ; Yes        ; |CPU|core:u3|mul:m|mul_datapath:u1|product[18]                                                                                                                          ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |CPU|ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
+; 134:1              ; 16 bits   ; 1424 LEs      ; 32 LEs               ; 1392 LEs               ; Yes        ; |CPU|core:u3|data[15]                                                                                                                                                   ;
+; 262:1              ; 3 bits    ; 522 LEs       ; 42 LEs               ; 480 LEs                ; Yes        ; |CPU|core:u3|AC[4]                                                                                                                                                      ;
+; 264:1              ; 4 bits    ; 704 LEs       ; 60 LEs               ; 644 LEs                ; Yes        ; |CPU|core:u3|AC[12]                                                                                                                                                     ;
+; 264:1              ; 2 bits    ; 352 LEs       ; 30 LEs               ; 322 LEs                ; Yes        ; |CPU|core:u3|AC[2]                                                                                                                                                      ;
+; 266:1              ; 2 bits    ; 354 LEs       ; 32 LEs               ; 322 LEs                ; Yes        ; |CPU|core:u3|AC[13]                                                                                                                                                     ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[30]                                                                                                                                                    ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[43]                                                                                                                                                    ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[48]                                                                                                                                                    ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[65]                                                                                                                                                    ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[83]                                                                                                                                                    ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[109]                                                                                                                                                   ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[125]                                                                                                                                                   ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[134]                                                                                                                                                   ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[146]                                                                                                                                                   ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[169]                                                                                                                                                   ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[187]                                                                                                                                                   ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[205]                                                                                                                                                   ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[213]                                                                                                                                                   ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[228]                                                                                                                                                   ;
+; 250:1              ; 16 bits   ; 2656 LEs      ; 96 LEs               ; 2560 LEs               ; Yes        ; |CPU|core:u3|REG[252]                                                                                                                                                   ;
+; 250:1              ; 15 bits   ; 2490 LEs      ; 90 LEs               ; 2400 LEs               ; Yes        ; |CPU|core:u3|REG[12]                                                                                                                                                    ;
+; 150:1              ; 15 bits   ; 1500 LEs      ; 30 LEs               ; 1470 LEs               ; Yes        ; |CPU|core:u3|PC[5]                                                                                                                                                      ;
+; 41:1               ; 15 bits   ; 405 LEs       ; 90 LEs               ; 315 LEs                ; Yes        ; |CPU|core:u3|address[5]                                                                                                                                                 ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |CPU|IO:u2|pointer[12]                                                                                                                                                  ;
+; 129:1              ; 16 bits   ; 1376 LEs      ; 16 LEs               ; 1360 LEs               ; Yes        ; |CPU|core:u3|BP[15]                                                                                                                                                     ;
+; 133:1              ; 15 bits   ; 1320 LEs      ; 30 LEs               ; 1290 LEs               ; Yes        ; |CPU|core:u3|SP[14]                                                                                                                                                     ;
+; 4:1                ; 56 bits   ; 112 LEs       ; 112 LEs              ; 0 LEs                  ; No         ; |CPU|HEX3                                                                                                                                                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|IO:u2|lcd_test:lcd1|Mux5                                                                                                                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|IO:u2|state                                                                                                                                                        ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |CPU|core:u3|Mux122                                                                                                                                                     ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |CPU|core:u3|Mux109                                                                                                                                                     ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |CPU|IO:u2|lcd_test:lcd1|Selector0                                                                                                                                      ;
+; 258:1              ; 2 bits    ; 344 LEs       ; 28 LEs               ; 316 LEs                ; No         ; |CPU|core:u3|Selector1                                                                                                                                                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                                                                                 ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]                                                              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                                                                                          ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                                   ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1 ;
++---------------------------------+--------------------+------+------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                         ;
++---------------------------------+--------------------+------+------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                          ;
++---------------------------------+--------------------+------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram:u1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------+
+; Parameter Name                     ; Value                ; Type                    ;
++------------------------------------+----------------------+-------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                 ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                 ;
+; WIDTH_A                            ; 16                   ; Signed Integer          ;
+; WIDTHAD_A                          ; 16                   ; Signed Integer          ;
+; NUMWORDS_A                         ; 65536                ; Signed Integer          ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WIDTH_B                            ; 1                    ; Untyped                 ;
+; WIDTHAD_B                          ; 1                    ; Untyped                 ;
+; NUMWORDS_B                         ; 1                    ; Untyped                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; INIT_FILE                          ; ../default.mif       ; Untyped                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                 ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_9ik1      ; Untyped                 ;
++------------------------------------+----------------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: core:u3|mul:m ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; N              ; 16    ; Signed Integer                    ;
+; M              ; 4     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: core:u3|mul:m|mul_datapath:u1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: core:u3|mul:m|mul_controller:u2 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 16    ; Signed Integer                                      ;
+; M              ; 4     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: core:u3|unsigned_div:usd ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; N              ; 16    ; Signed Integer                               ;
+; M              ; 16    ; Signed Integer                               ;
+; L              ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: core:u3|unsigned_div:usd|unsigned_div_datapath:u1 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                                        ;
+; M              ; 16    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: core:u3|unsigned_div:usd|unsigned_div_controller:u2 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                                          ;
+; M              ; 16    ; Signed Integer                                                          ;
+; L              ; 4     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: core:u3|signed_div:sd ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; N              ; 16    ; Signed Integer                            ;
+; M              ; 16    ; Signed Integer                            ;
+; L              ; 4     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: core:u3|signed_div:sd|signed_div_datapath:u1 ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                                   ;
+; M              ; 16    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: core:u3|signed_div:sd|signed_div_controller:u2 ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                                     ;
+; M              ; 16    ; Signed Integer                                                     ;
+; L              ; 4     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                   ;
++-------------------------------------------+----------------------------------------+
+; Name                                      ; Value                                  ;
++-------------------------------------------+----------------------------------------+
+; Number of entity instances                ; 1                                      ;
+; Entity Instance                           ; ram:u1|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                            ;
+;     -- WIDTH_A                            ; 16                                     ;
+;     -- NUMWORDS_A                         ; 65536                                  ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                           ;
+;     -- WIDTH_B                            ; 1                                      ;
+;     -- NUMWORDS_B                         ; 1                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                              ;
++-------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IO:u2|lcd_test:lcd1"                                                                                                                                  ;
++-------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                               ;
++-------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; line1 ; Input ; Warning  ; Input port expression (128 bits) is smaller than the input port (256 bits) it drives.  Extra input bit(s) "line1[255..128]" will be connected to GND. ;
+; line2 ; Input ; Warning  ; Input port expression (128 bits) is smaller than the input port (256 bits) it drives.  Extra input bit(s) "line2[255..128]" will be connected to GND. ;
++-------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IO:u2|lcd_decoder:l1|ascii_decoder_hex:adh11"                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; In-System Memory Content Editor Settings                                                                                          ;
++----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------+
+; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                    ;
++----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------+
+; 0              ; RAM         ; 16    ; 65536 ; Read/Write ; ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated ;
++----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------+
+
+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; Top              ; 00:00:32     ;
+; sld_hub:auto_hub ; 00:00:00     ;
++------------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Dec 20 10:19:49 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
+    Info (12023): Found entity 1: CPU
+Info (12021): Found 1 design units, including 1 entities, in source file core.v
+    Info (12023): Found entity 1: core
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: ram
+Info (12021): Found 1 design units, including 1 entities, in source file io.v
+    Info (12023): Found entity 1: IO
+Info (12021): Found 1 design units, including 1 entities, in source file lcd_controller.v
+    Info (12023): Found entity 1: lcd_controller
+Info (12021): Found 1 design units, including 1 entities, in source file lcd_test.v
+    Info (12023): Found entity 1: lcd_test
+Info (12021): Found 1 design units, including 1 entities, in source file lcd_decoder.v
+    Info (12023): Found entity 1: lcd_decoder
+Info (12021): Found 1 design units, including 1 entities, in source file ascii_decoder_hex.v
+    Info (12023): Found entity 1: ascii_decoder_hex
+Info (12021): Found 1 design units, including 1 entities, in source file button_pulse.v
+    Info (12023): Found entity 1: button_pulse
+Info (12021): Found 1 design units, including 1 entities, in source file led7seg.v
+    Info (12023): Found entity 1: led7seg
+Info (12021): Found 1 design units, including 1 entities, in source file mul.v
+    Info (12023): Found entity 1: mul
+Info (12021): Found 1 design units, including 1 entities, in source file mul_datapath.v
+    Info (12023): Found entity 1: mul_datapath
+Info (12021): Found 1 design units, including 1 entities, in source file mul_controller.v
+    Info (12023): Found entity 1: mul_controller
+Info (12021): Found 1 design units, including 1 entities, in source file signed_div.v
+    Info (12023): Found entity 1: signed_div
+Info (12021): Found 1 design units, including 1 entities, in source file signed_div_datapath.v
+    Info (12023): Found entity 1: signed_div_datapath
+Info (12021): Found 1 design units, including 1 entities, in source file signed_div_controller.v
+    Info (12023): Found entity 1: signed_div_controller
+Info (12021): Found 1 design units, including 1 entities, in source file unsigned_div.v
+    Info (12023): Found entity 1: unsigned_div
+Info (12021): Found 1 design units, including 1 entities, in source file unsigned_div_datapath.v
+    Info (12023): Found entity 1: unsigned_div_datapath
+Info (12021): Found 1 design units, including 1 entities, in source file unsigned_div_controller.v
+    Info (12023): Found entity 1: unsigned_div_controller
+Info (12127): Elaborating entity "CPU" for the top level hierarchy
+Info (12128): Elaborating entity "button_pulse" for hierarchy "button_pulse:k2"
+Info (12128): Elaborating entity "ram" for hierarchy "ram:u1"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:u1|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "ram:u1|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "ram:u1|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "../default.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=RAM"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "65536"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "16"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9ik1.tdf
+    Info (12023): Found entity 1: altsyncram_9ik1
+Info (12128): Elaborating entity "altsyncram_9ik1" for hierarchy "ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_h1b2.tdf
+    Info (12023): Found entity 1: altsyncram_h1b2
+Info (12128): Elaborating entity "altsyncram_h1b2" for hierarchy "ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_rsa.tdf
+    Info (12023): Found entity 1: decode_rsa
+Info (12128): Elaborating entity "decode_rsa" for hierarchy "ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1|decode_rsa:decode4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_k8a.tdf
+    Info (12023): Found entity 1: decode_k8a
+Info (12128): Elaborating entity "decode_k8a" for hierarchy "ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1|decode_k8a:rden_decode_a"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_qob.tdf
+    Info (12023): Found entity 1: mux_qob
+Info (12128): Elaborating entity "mux_qob" for hierarchy "ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|altsyncram_h1b2:altsyncram1|mux_qob:mux6"
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info (12130): Elaborated megafunction instantiation "ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info (12133): Instantiated megafunction "ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter:
+    Info (12134): Parameter "CVALUE" = "0000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "1380011264"
+    Info (12134): Parameter "NUMWORDS" = "65536"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "5"
+    Info (12134): Parameter "WIDTH_WORD" = "16"
+    Info (12134): Parameter "WIDTHAD" = "16"
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "ram:u1|altsyncram:altsyncram_component|altsyncram_9ik1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr"
+Info (12128): Elaborating entity "IO" for hierarchy "IO:u2"
+Warning (10230): Verilog HDL assignment warning at IO.v(62): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at IO.v(71): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at IO.v(72): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at IO.v(75): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at IO.v(76): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at IO.v(77): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at IO.v(81): truncated value with size 32 to match size of target (16)
+Warning (10240): Verilog HDL Always Construct warning at IO.v(60): inferring latch(es) for variable "pointer", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at IO.v(111): inferring latch(es) for variable "instruction", which holds its previous value in one or more paths through the always construct
+Warning (10034): Output port "LEDR[17..16]" at IO.v(23) has no driver
+Info (10041): Inferred latch for "instruction[0]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[1]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[2]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[3]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[4]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[5]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[6]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[7]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[8]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[9]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[10]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[11]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[12]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[13]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[14]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[15]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[16]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[17]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[18]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[19]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[20]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[21]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[22]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[23]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[24]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[25]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[26]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[27]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[28]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[29]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[30]" at IO.v(112)
+Info (10041): Inferred latch for "instruction[31]" at IO.v(112)
+Info (10041): Inferred latch for "pointer[0]" at IO.v(60)
+Info (12128): Elaborating entity "lcd_decoder" for hierarchy "IO:u2|lcd_decoder:l1"
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(77): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(78): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(79): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(80): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(81): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(82): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(83): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(84): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(85): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(86): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(87): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(88): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(89): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(90): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(91): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(92): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(93): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(94): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(95): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(96): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(97): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(98): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(99): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(100): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(101): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(102): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(103): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(104): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(105): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(106): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(108): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(109): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(110): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(111): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(112): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(113): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(114): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(115): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(116): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(117): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(118): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(119): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(120): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(121): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(122): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(123): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(124): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_decoder.v(125): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "ascii_decoder_hex" for hierarchy "IO:u2|lcd_decoder:l1|ascii_decoder_hex:adh11"
+Warning (10230): Verilog HDL assignment warning at ascii_decoder_hex.v(5): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "lcd_test" for hierarchy "IO:u2|lcd_test:lcd1"
+Warning (10230): Verilog HDL assignment warning at lcd_test.v(38): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_test.v(48): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_test.v(50): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_test.v(52): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_test.v(53): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_test.v(55): truncated value with size 32 to match size of target (18)
+Warning (10230): Verilog HDL assignment warning at lcd_test.v(56): truncated value with size 32 to match size of target (18)
+Warning (10230): Verilog HDL assignment warning at lcd_test.v(59): truncated value with size 32 to match size of target (18)
+Warning (10272): Verilog HDL Case Statement warning at lcd_test.v(81): case item expression covers a value already covered by a previous case item
+Info (12128): Elaborating entity "lcd_controller" for hierarchy "IO:u2|lcd_controller:lcd2"
+Warning (10230): Verilog HDL assignment warning at lcd_controller.v(26): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_controller.v(28): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "led7seg" for hierarchy "IO:u2|led7seg:led7"
+Info (12128): Elaborating entity "core" for hierarchy "core:u3"
+Warning (10230): Verilog HDL assignment warning at core.v(200): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at core.v(202): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at core.v(206): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at core.v(207): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at core.v(214): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at core.v(216): truncated value with size 32 to match size of target (17)
+Warning (10230): Verilog HDL assignment warning at core.v(217): truncated value with size 32 to match size of target (17)
+Warning (10230): Verilog HDL assignment warning at core.v(228): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at core.v(229): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at core.v(261): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at core.v(262): truncated value with size 17 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core.v(266): truncated value with size 17 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core.v(267): truncated value with size 17 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core.v(268): truncated value with size 17 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core.v(269): truncated value with size 17 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core.v(285): truncated value with size 32 to match size of target (16)
+Warning (10034): Output port "LEDR[17..16]" at core.v(17) has no driver
+Warning (10034): Output port "LEDG[8..4]" at core.v(18) has no driver
+Info (12128): Elaborating entity "mul" for hierarchy "core:u3|mul:m"
+Info (12128): Elaborating entity "mul_datapath" for hierarchy "core:u3|mul:m|mul_datapath:u1"
+Info (12128): Elaborating entity "mul_controller" for hierarchy "core:u3|mul:m|mul_controller:u2"
+Warning (10230): Verilog HDL assignment warning at mul_controller.v(11): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at mul_controller.v(14): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at mul_controller.v(14): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at mul_controller.v(15): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at mul_controller.v(15): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "unsigned_div" for hierarchy "core:u3|unsigned_div:usd"
+Info (12128): Elaborating entity "unsigned_div_datapath" for hierarchy "core:u3|unsigned_div:usd|unsigned_div_datapath:u1"
+Warning (10230): Verilog HDL assignment warning at unsigned_div_datapath.v(24): truncated value with size 33 to match size of target (32)
+Info (12128): Elaborating entity "unsigned_div_controller" for hierarchy "core:u3|unsigned_div:usd|unsigned_div_controller:u2"
+Warning (10230): Verilog HDL assignment warning at unsigned_div_controller.v(16): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at unsigned_div_controller.v(19): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at unsigned_div_controller.v(19): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at unsigned_div_controller.v(20): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at unsigned_div_controller.v(21): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "signed_div" for hierarchy "core:u3|signed_div:sd"
+Info (12128): Elaborating entity "signed_div_datapath" for hierarchy "core:u3|signed_div:sd|signed_div_datapath:u1"
+Warning (10230): Verilog HDL assignment warning at signed_div_datapath.v(33): truncated value with size 33 to match size of target (32)
+Info (12128): Elaborating entity "signed_div_controller" for hierarchy "core:u3|signed_div:sd|signed_div_controller:u2"
+Warning (10230): Verilog HDL assignment warning at signed_div_controller.v(16): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at signed_div_controller.v(19): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at signed_div_controller.v(19): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at signed_div_controller.v(20): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at signed_div_controller.v(21): truncated value with size 32 to match size of target (4)
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "IO:u2|pointer[1]" is converted into an equivalent circuit using register "IO:u2|pointer[1]~_emulated" and latch "IO:u2|pointer[1]~1"
+    Warning (13310): Register "IO:u2|pointer[2]" is converted into an equivalent circuit using register "IO:u2|pointer[2]~_emulated" and latch "IO:u2|pointer[2]~5"
+    Warning (13310): Register "IO:u2|pointer[3]" is converted into an equivalent circuit using register "IO:u2|pointer[3]~_emulated" and latch "IO:u2|pointer[3]~9"
+    Warning (13310): Register "IO:u2|pointer[4]" is converted into an equivalent circuit using register "IO:u2|pointer[4]~_emulated" and latch "IO:u2|pointer[4]~13"
+    Warning (13310): Register "IO:u2|pointer[5]" is converted into an equivalent circuit using register "IO:u2|pointer[5]~_emulated" and latch "IO:u2|pointer[5]~17"
+    Warning (13310): Register "IO:u2|pointer[6]" is converted into an equivalent circuit using register "IO:u2|pointer[6]~_emulated" and latch "IO:u2|pointer[6]~21"
+    Warning (13310): Register "IO:u2|pointer[7]" is converted into an equivalent circuit using register "IO:u2|pointer[7]~_emulated" and latch "IO:u2|pointer[7]~25"
+    Warning (13310): Register "IO:u2|pointer[8]" is converted into an equivalent circuit using register "IO:u2|pointer[8]~_emulated" and latch "IO:u2|pointer[8]~29"
+    Warning (13310): Register "IO:u2|pointer[9]" is converted into an equivalent circuit using register "IO:u2|pointer[9]~_emulated" and latch "IO:u2|pointer[9]~33"
+    Warning (13310): Register "IO:u2|pointer[10]" is converted into an equivalent circuit using register "IO:u2|pointer[10]~_emulated" and latch "IO:u2|pointer[10]~37"
+    Warning (13310): Register "IO:u2|pointer[11]" is converted into an equivalent circuit using register "IO:u2|pointer[11]~_emulated" and latch "IO:u2|pointer[11]~41"
+    Warning (13310): Register "IO:u2|pointer[12]" is converted into an equivalent circuit using register "IO:u2|pointer[12]~_emulated" and latch "IO:u2|pointer[12]~45"
+    Warning (13310): Register "IO:u2|pointer[13]" is converted into an equivalent circuit using register "IO:u2|pointer[13]~_emulated" and latch "IO:u2|pointer[13]~49"
+    Warning (13310): Register "IO:u2|pointer[14]" is converted into an equivalent circuit using register "IO:u2|pointer[14]~_emulated" and latch "IO:u2|pointer[14]~53"
+    Warning (13310): Register "IO:u2|pointer[15]" is converted into an equivalent circuit using register "IO:u2|pointer[15]~_emulated" and latch "IO:u2|pointer[15]~57"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[16]" is stuck at GND
+    Warning (13410): Pin "LEDR[17]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[7]" is stuck at GND
+    Warning (13410): Pin "LEDG[8]" is stuck at GND
+    Warning (13410): Pin "LCD_RW" is stuck at GND
+    Warning (13410): Pin "LCD_ON" is stuck at VCC
+    Warning (13410): Pin "LCD_BLON" is stuck at VCC
+Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (17049): 10 registers lost all their fanouts during netlist optimizations.
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
+Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
+Info (144001): Generated suppressed messages file D:/Verilog/CPU/output_files/CPU.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 5926 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 26 input pins
+    Info (21059): Implemented 97 output pins
+    Info (21061): Implemented 5674 logic cells
+    Info (21064): Implemented 128 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 136 warnings
+    Info: Peak virtual memory: 4704 megabytes
+    Info: Processing ended: Mon Dec 20 10:20:27 2021
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:36
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Verilog/CPU/output_files/CPU.map.smsg.
+
+

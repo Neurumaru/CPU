@@ -1,0 +1,23 @@
+module cpu(CLK_50, KEY, SW, HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
+	input CLK_50;
+	input [3:0] KEY;
+	input [17:0] SW;
+	output [6:0] HEX7;
+	output [6:0] HEX6;
+	output [6:0] HEX5;
+	output [6:0] HEX4;
+	output [6:0] HEX3;
+	output [6:0] HEX2;
+	output [6:0] HEX1;
+	output [6:0] HEX0;
+
+	wire clk;					//CLK_50		external clock
+	wire reset;					//SW[17] 	posedge reset (power)
+	wire input_mode			//SW[16]		0: op-code, operand, 1: operand
+	wire [15:0] command;		//SW[15:0] 	32-bit instruction 
+									//				(8bit op-code / 8bit operand or 16bit operand)
+	wire clear;					//KEY[3]		delete instruction
+	wire up;						//KEY[2]		up key
+	wire down;					//KEY[1]		down key
+	wire insert;				//KEY[0]		insert instruction
+endmodule

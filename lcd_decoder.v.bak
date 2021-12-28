@@ -1,0 +1,5 @@
+module lcd_decoder(instruction, line, length);
+	input [31:0] instruction;
+	output reg [16*16-1:0] line;
+	output reg [3:0] length;
+endmodule

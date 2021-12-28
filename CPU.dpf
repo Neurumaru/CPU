@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="AUD_ADCDAT" source="Pin Planner" >
+		</pin>
+		<pin name="AUD_ADCLRCK" source="Pin Planner" >
+		</pin>
+		<pin name="AUD_BCLK" source="Pin Planner" >
+		</pin>
+		<pin name="AUD_DACDAT" source="Pin Planner" >
+		</pin>
+		<pin name="AUD_DACLRCK" source="Pin Planner" >
+		</pin>
+		<pin name="AUD_XCK" source="Pin Planner" >
+		</pin>
+		<pin name="CLOCK2_50" source="Pin Planner" >
+		</pin>
+		<pin name="CLOCK3_50" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[12]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[11]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[10]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[9]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[8]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[7]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[6]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[5]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[4]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[3]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[2]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[1]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[0]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_BA[1]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_BA[0]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_CAS_N" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_CKE" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_CS_N" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[31]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[30]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[29]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[28]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[27]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[26]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[25]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[24]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[23]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[22]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[21]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[20]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[19]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[18]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[17]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[16]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[15]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[14]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[13]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[12]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[11]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[10]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[9]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[8]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[7]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[6]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[5]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[4]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[3]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[2]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[1]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[0]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQM[3]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQM[2]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQM[1]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQM[0]" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_RAS_N" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_WE_N" source="Pin Planner" >
+		</pin>
+		<pin name="EEP_I2C_SCLK" source="Pin Planner" >
+		</pin>
+		<pin name="EEP_I2C_SDAT" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_GTX_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_INT_N" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_LINK100" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_MDC" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_MDIO" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_RST_N" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_RX_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_RX_COL" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_RX_CRS" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_RX_DATA[3]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_RX_DATA[2]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_RX_DATA[1]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_RX_DATA[0]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_RX_DV" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_RX_ER" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_TX_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_TX_DATA[3]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_TX_DATA[2]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_TX_DATA[1]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_TX_DATA[0]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_TX_EN" source="Pin Planner" >
+		</pin>
+		<pin name="ENET0_TX_ER" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_GTX_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_INT_N" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_LINK100" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_MDC" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_MDIO" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_RST_N" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_RX_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_RX_COL" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_RX_CRS" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_RX_DATA[3]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_RX_DATA[2]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_RX_DATA[1]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_RX_DATA[0]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_RX_DV" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_RX_ER" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_TX_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_TX_DATA[3]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_TX_DATA[2]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_TX_DATA[1]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_TX_DATA[0]" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_TX_EN" source="Pin Planner" >
+		</pin>
+		<pin name="ENET1_TX_ER" source="Pin Planner" >
+		</pin>
+		<pin name="ENETCLK_25" source="Pin Planner" >
+		</pin>
+		<pin name="EX_IO[6]" source="Pin Planner" >
+		</pin>
+		<pin name="EX_IO[5]" source="Pin Planner" >
+		</pin>
+		<pin name="EX_IO[4]" source="Pin Planner" >
+		</pin>
+		<pin name="EX_IO[3]" source="Pin Planner" >
+		</pin>
+		<pin name="EX_IO[2]" source="Pin Planner" >
+		</pin>
+		<pin name="EX_IO[1]" source="Pin Planner" >
+		</pin>
+		<pin name="EX_IO[0]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[22]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[21]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[20]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[19]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[18]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[17]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[16]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[15]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[14]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[13]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[12]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[11]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[10]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[9]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[8]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[7]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[6]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[5]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[4]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[3]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[2]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[1]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[0]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_CE_N" source="Pin Planner" >
+		</pin>
+		<pin name="FL_DQ[7]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_DQ[6]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_DQ[5]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_DQ[4]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_DQ[3]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_DQ[2]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_DQ[1]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_DQ[0]" source="Pin Planner" >
+		</pin>
+		<pin name="FL_OE_N" source="Pin Planner" >
+		</pin>
+		<pin name="FL_RST_N" source="Pin Planner" >
+		</pin>
+		<pin name="FL_RY" source="Pin Planner" >
+		</pin>
+		<pin name="FL_WE_N" source="Pin Planner" >
+		</pin>
+		<pin name="FL_WP_N" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[35]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[34]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[33]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[32]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[31]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[30]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[29]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[28]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[27]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[26]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[25]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[24]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[23]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[22]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[21]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[20]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[19]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[18]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[17]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[16]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[15]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[14]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[13]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[12]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[11]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[10]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[9]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[8]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[7]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[6]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[5]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[4]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[3]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[2]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[1]" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO[0]" source="Pin Planner" >
+		</pin>
+		<pin name="HSMC_CLKIN0" source="Pin Planner" >
+		</pin>
+		<pin name="HSMC_CLKIN_P1" source="Pin Planner" diff_pair_node="HSMC_CLKIN_N1" >
+		</pin>
+		<pin name="HSMC_CLKIN_P2" source="Pin Planner" diff_pair_node="HSMC_CLKIN_N2" >
+		</pin>
+		<pin name="HSMC_CLKOUT0" source="Pin Planner" >
+		</pin>
+		<pin name="HSMC_CLKOUT_P1" source="Pin Planner" diff_pair_node="HSMC_CLKOUT_N1" >
+		</pin>
+		<pin name="HSMC_CLKOUT_P2" source="Pin Planner" diff_pair_node="HSMC_CLKOUT_N2" >
+		</pin>
+		<pin name="HSMC_D[3]" source="Pin Planner" >
+		</pin>
+		<pin name="HSMC_D[2]" source="Pin Planner" >
+		</pin>
+		<pin name="HSMC_D[1]" source="Pin Planner" >
+		</pin>
+		<pin name="HSMC_D[0]" source="Pin Planner" >
+		</pin>
+		<pin name="HSMC_RX_D_P[16]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[16]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[15]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[15]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[14]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[14]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[13]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[13]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[12]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[12]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[11]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[11]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[10]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[10]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[9]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[9]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[8]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[8]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[7]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[7]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[6]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[6]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[5]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[5]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[4]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[4]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[3]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[3]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[2]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[2]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[1]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[1]" >
+		</pin>
+		<pin name="HSMC_RX_D_P[0]" source="Pin Planner" diff_pair_node="HSMC_RX_D_N[0]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[16]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[16]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[15]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[15]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[14]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[14]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[13]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[13]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[12]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[12]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[11]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[11]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[10]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[10]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[9]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[9]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[8]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[8]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[7]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[7]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[6]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[6]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[5]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[5]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[4]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[4]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[3]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[3]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[2]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[2]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[1]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[1]" >
+		</pin>
+		<pin name="HSMC_TX_D_P[0]" source="Pin Planner" diff_pair_node="HSMC_TX_D_N[0]" >
+		</pin>
+		<pin name="I2C_SCLK" source="Pin Planner" >
+		</pin>
+		<pin name="I2C_SDAT" source="Pin Planner" >
+		</pin>
+		<pin name="IRDA_RXD" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[8]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[7]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[6]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[5]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[4]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[3]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[2]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[1]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[0]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_ADDR[1]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_ADDR[0]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_CS_N" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DACK_N[1]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DACK_N[0]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[15]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[14]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[13]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[12]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[11]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[10]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[9]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[8]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[7]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[6]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[5]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[4]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[3]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[2]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[1]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DATA[0]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DREQ[1]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_DREQ[0]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_FSPEED" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_INT[1]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_INT[0]" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_LSPEED" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_RD_N" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_RST_N" source="Pin Planner" >
+		</pin>
+		<pin name="OTG_WR_N" source="Pin Planner" >
+		</pin>
+		<pin name="PS2_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="PS2_CLK2" source="Pin Planner" >
+		</pin>
+		<pin name="PS2_DAT" source="Pin Planner" >
+		</pin>
+		<pin name="PS2_DAT2" source="Pin Planner" >
+		</pin>
+		<pin name="SD_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="SD_CMD" source="Pin Planner" >
+		</pin>
+		<pin name="SD_DAT[3]" source="Pin Planner" >
+		</pin>
+		<pin name="SD_DAT[2]" source="Pin Planner" >
+		</pin>
+		<pin name="SD_DAT[1]" source="Pin Planner" >
+		</pin>
+		<pin name="SD_DAT[0]" source="Pin Planner" >
+		</pin>
+		<pin name="SD_WP_N" source="Pin Planner" >
+		</pin>
+		<pin name="SMA_CLKIN" source="Pin Planner" >
+		</pin>
+		<pin name="SMA_CLKOUT" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[19]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[18]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[17]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[16]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[15]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[14]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[13]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[12]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[11]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[10]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[9]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[8]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[7]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[6]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[5]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[4]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[3]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[2]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[1]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_ADDR[0]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_CE_N" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[15]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[14]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[13]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[12]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[11]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[10]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[9]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[8]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[7]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[6]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[5]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[4]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[3]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[2]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[1]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_DQ[0]" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_LB_N" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_OE_N" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_UB_N" source="Pin Planner" >
+		</pin>
+		<pin name="SRAM_WE_N" source="Pin Planner" >
+		</pin>
+		<pin name="TD_CLK27" source="Pin Planner" >
+		</pin>
+		<pin name="TD_DATA[7]" source="Pin Planner" >
+		</pin>
+		<pin name="TD_DATA[6]" source="Pin Planner" >
+		</pin>
+		<pin name="TD_DATA[5]" source="Pin Planner" >
+		</pin>
+		<pin name="TD_DATA[4]" source="Pin Planner" >
+		</pin>
+		<pin name="TD_DATA[3]" source="Pin Planner" >
+		</pin>
+		<pin name="TD_DATA[2]" source="Pin Planner" >
+		</pin>
+		<pin name="TD_DATA[1]" source="Pin Planner" >
+		</pin>
+		<pin name="TD_DATA[0]" source="Pin Planner" >
+		</pin>
+		<pin name="TD_HS" source="Pin Planner" >
+		</pin>
+		<pin name="TD_RESET_N" source="Pin Planner" >
+		</pin>
+		<pin name="TD_VS" source="Pin Planner" >
+		</pin>
+		<pin name="UART_CTS" source="Pin Planner" >
+		</pin>
+		<pin name="UART_RTS" source="Pin Planner" >
+		</pin>
+		<pin name="UART_RXD" source="Pin Planner" >
+		</pin>
+		<pin name="UART_TXD" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_B[7]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_B[6]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_B[5]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_B[4]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_B[3]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_B[2]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_B[1]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_B[0]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_BLANK_N" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_G[7]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_G[6]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_G[5]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_G[4]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_G[3]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_G[2]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_G[1]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_G[0]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_HS" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_R[7]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_R[6]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_R[5]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_R[4]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_R[3]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_R[2]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_R[1]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_R[0]" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_SYNC_N" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_VS" source="Pin Planner" >
+		</pin>
+		<pin name="HSMC_CLKIN_N1" source="Pin Planner" diff_pair_node="HSMC_CLKIN_P1" >
+		</pin>
+		<pin name="HSMC_CLKIN_N2" source="Pin Planner" diff_pair_node="HSMC_CLKIN_P2" >
+		</pin>
+		<pin name="HSMC_TX_D_N[0]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[0]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[0]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[0]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[1]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[1]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[1]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[1]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[2]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[2]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[2]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[2]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[3]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[3]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[3]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[3]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[4]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[4]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[4]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[4]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[5]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[5]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[5]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[5]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[6]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[6]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[6]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[6]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[7]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[7]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[7]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[7]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[8]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[8]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[8]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[8]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[9]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[9]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[9]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[9]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[10]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[10]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[10]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[10]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[11]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[11]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[11]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[11]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[12]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[12]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[12]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[12]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[13]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[13]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[13]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[13]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[14]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[14]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[14]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[14]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[15]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[15]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[15]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[15]" >
+		</pin>
+		<pin name="HSMC_TX_D_N[16]" source="Pin Planner" diff_pair_node="HSMC_TX_D_P[16]" >
+		</pin>
+		<pin name="HSMC_RX_D_N[16]" source="Pin Planner" diff_pair_node="HSMC_RX_D_P[16]" >
+		</pin>
+		<pin name="HSMC_CLKOUT_N2" source="Pin Planner" diff_pair_node="HSMC_CLKOUT_P2" >
+		</pin>
+		<pin name="HSMC_CLKOUT_N1" source="Pin Planner" diff_pair_node="HSMC_CLKOUT_P1" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

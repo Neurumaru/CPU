@@ -1,0 +1,161 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Verilog\CPU\simulation\qsim
+vascii_decoder_hex
+Z1 !s100 nCW7dG<fHA[n<LYiP=MGF2
+Z2 IN17YD7=hRM0YYeJ9XgC@E3
+Z3 V7E`CI@C4KGTV82Ad^QkVV1
+Z4 dD:\Verilog\CPU\simulation\qsim
+Z5 w1639834898
+Z6 8CPU.vo
+Z7 FCPU.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|CPU.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1639834899.556000
+Z12 !s107 CPU.vo|
+!s101 -O0
+vascii_decoder_hex_vlg_check_tst
+!i10b 1
+Z13 !s100 ln:e1GPMN2zJVahdClWKz3
+Z14 Iag^g=9iFQVY=5OPoJbb<h0
+Z15 VOa?Nj[oSz41Z^GjGYYKL60
+R4
+R5
+Z16 8CPU.vt
+Z17 FCPU.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z18 !s108 1639834899.683000
+Z19 !s107 CPU.vt|
+Z20 !s90 -work|work|CPU.vt|
+!s101 -O0
+R10
+vascii_decoder_hex_vlg_sample_tst
+!i10b 1
+Z21 !s100 2C7fQ``o^@=CoGIlSko0g2
+Z22 I=gG8ZzWQHe6hV14iEdXAY2
+Z23 VgVoT]dOaz>>3PW_3S4eH?0
+R4
+R5
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vascii_decoder_hex_vlg_vec_tst
+!i10b 1
+!s100 Fc9b`l`_@XH9g2HXO^06P3
+Il^5W`oAhGg?mK>MZomfBA2
+Z24 V7V6N:X;99j?hH8EhczPXM2
+R4
+R5
+R16
+R17
+Z25 L0 277
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vCPU
+Z26 IMSnKMIhkNcAKbmCQ4254A1
+Z27 VIOdM5]Y2GG5aA`oW4<Z4T3
+R4
+Z28 w1639289992
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z29 n@c@p@u
+Z30 !s100 kRf7[WjD^<QS4iXYX5M6i3
+Z31 !s108 1639289993.547000
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_vlg_check_tst
+Z32 !s100 5kV_Lbm[ONZhJ@LNjVkFl0
+Z33 Inf[XUELJEPa:03UmUmL;z0
+Z34 VX7>AkWcPigIieA4M7P>a^1
+R4
+Z35 w1639289991
+R16
+R17
+L0 61
+R8
+r1
+31
+Z36 !s108 1639289994.384000
+Z37 !s107 CPU.vt|
+R20
+R10
+Z38 n@c@p@u_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_vlg_sample_tst
+Z39 !s100 IokUM>i53@=F1>mWP?R8X2
+Z40 IhH8KagU6U]I8Zkk_^`^=W0
+Z41 Vk[_F_of3m2SF5_VaPGkHD2
+R4
+R35
+R16
+R17
+L0 29
+R8
+r1
+31
+R36
+R37
+R20
+R10
+Z42 n@c@p@u_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_vlg_vec_tst
+Z43 !s100 aia0iEoB21Q9b4;@6D3Fb3
+Z44 IYO>[16LW;zf=Ue6n<^L?m3
+Z45 VJGhMb3eOK0GJGjGadCX2W1
+R4
+R35
+R16
+R17
+Z46 L0 1990
+R8
+r1
+31
+R36
+R37
+R20
+R10
+Z47 n@c@p@u_vlg_vec_tst
+!i10b 1
+!s85 0
+!s101 -O0

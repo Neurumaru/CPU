@@ -1,0 +1,31 @@
+module core(clk, reset, MAR, MDR);
+	input clk, reset;
+	output reg [15:0] MAR;
+	inout reg [15:0] MDR;
+	
+	reg [15:0] PC;
+	reg [31:0] IR;
+	reg [15:0] AC;
+	reg [15:0][15:0] REG;
+	
+	reg [2:0] 	state;
+	localparam 	RESET=0,
+					FETCH_HIGH=1, 
+					FETCH_LOW=2, 
+					DECODE=3, 
+					EXECUTE=4;
+	
+	always @(posedge clk or posedge reset) begin
+		if(reset) begin PC=0; IR=0; AC=0; REG[15:0][15:0] = 0; state=0; end
+		else begin
+			case(state)
+				RESET: state <= FETCH_HIGH;
+				FETCH_HIGH: state <= FETCH_LOW;
+				FETCH_LOW: state <= DECODE;
+				DECODE: 	if(op_jmp) state <= FETCH_HIGH;
+							else state <= EXECUTE;
+				EXECUTE: state <= RESET;
+			endcase
+		end
+	end
+endmodule

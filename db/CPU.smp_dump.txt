@@ -1,0 +1,39 @@
+
+State Machine - |CPU|core:u3|state
+Name state.EXECUTE2 state.EXECUTE1 state.DECODE state.FETCH4 state.FETCH3 state.FETCH2 state.FETCH1 state.IDLE state.EXECUTE3 
+state.IDLE 0 0 0 0 0 0 0 0 0 
+state.FETCH1 0 0 0 0 0 0 1 1 0 
+state.FETCH2 0 0 0 0 0 1 0 1 0 
+state.FETCH3 0 0 0 0 1 0 0 1 0 
+state.FETCH4 0 0 0 1 0 0 0 1 0 
+state.DECODE 0 0 1 0 0 0 0 1 0 
+state.EXECUTE1 0 1 0 0 0 0 0 1 0 
+state.EXECUTE2 1 0 0 0 0 0 0 1 0 
+state.EXECUTE3 0 0 0 0 0 0 0 1 1 
+
+State Machine - |CPU|IO:u2|state
+Name state.W0 state.R5 state.R4 state.R3 state.R2 state.R1 state.IDLE state.R0 state.W1 
+state.R0 0 0 0 0 0 0 0 0 0 
+state.IDLE 0 0 0 0 0 0 1 1 0 
+state.R1 0 0 0 0 0 1 0 1 0 
+state.R2 0 0 0 0 1 0 0 1 0 
+state.R3 0 0 0 1 0 0 0 1 0 
+state.R4 0 0 1 0 0 0 0 1 0 
+state.R5 0 1 0 0 0 0 0 1 0 
+state.W0 1 0 0 0 0 0 0 1 0 
+state.W1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |CPU|IO:u2|lcd_controller:lcd2|state
+Name state.S4 state.S2 state.S1 state.S0 state.S3 
+state.S0 0 0 0 0 0 
+state.S1 0 0 1 1 0 
+state.S2 0 1 0 1 0 
+state.S4 1 0 0 1 0 
+state.S3 0 0 0 1 1 
+
+State Machine - |CPU|IO:u2|lcd_test:lcd1|state
+Name state.S3 state.S2 state.S1 state.S0 
+state.S0 0 0 0 0 
+state.S1 0 0 1 1 
+state.S2 0 1 0 1 
+state.S3 1 0 0 1 
